@@ -1,20 +1,29 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Service now helper",
     "version": "1.0",
     "description": "Helpful scripts to run on Service now page",
     "icons": {
         "48": "icons/border-48.png"
     },
+    "action": {},
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "service-worker.js",
+        "type": "module"
+    },
     "content_scripts": [
         {
             "matches": [
                 "*://*.servicenow.com/*",
+                "*://*.service-now.com/*",
                 "*://*.google.com/*"
             ],
             "js": [
-                "borderify.js",
-                "reload.js"
+                "scripts/servicenowtest.js"
             ]
         }
     ]
