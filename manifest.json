@@ -22,6 +22,9 @@
                 "*://*.service-now.com/*",
                 "*://*.google.com/*"
             ],
+            "css": [
+                "styles/injstyles-namespace-vkm.css"
+            ],
             "js": [
                 "scripts/servicenowtest.js"
             ]
